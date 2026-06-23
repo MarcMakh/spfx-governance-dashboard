@@ -3,7 +3,7 @@ require('@rushstack/eslint-config/patch/modern-module-resolution');
 module.exports = {
   extends: ['@microsoft/eslint-config-spfx/lib/profiles/react'],
   parserOptions: { tsconfigRootDir: __dirname },
-  ignorePatterns: ['lib/**', 'dist/**', 'node_modules/**', '*.js'],
+  ignorePatterns: ['lib/**', 'dist/**', 'node_modules/**', '*.js', '**/*.test.ts'],
   overrides: [
     {
       files: ['*.ts', '*.tsx'],
