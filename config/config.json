@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "governance-dashboard-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/governanceDashboard/GovernanceDashboardWebPart.js",
+          "manifest": "./src/webparts/governanceDashboard/GovernanceDashboardWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "GovernanceDashboardWebPartStrings": "lib/webparts/governanceDashboard/loc/{locale}.js"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "spfx-governance-dashboard-client-side-solution",
+    "id": "7e8f9a0b-1c2d-4e4f-8a6b-7c8d9e0f1a2b",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "Mark Makhoul",
+      "websiteUrl": "https://github.com/MarcMakh/spfx-governance-dashboard",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": ""
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "Surface SharePoint governance signals from Microsoft Graph."
+      },
+      "longDescription": {
+        "default": "A client-side web part that queries Microsoft Graph to highlight stale sites, inactive sites, storage pressure and ownership/permission anomalies across the tenant, helping administrators run a SharePoint governance program."
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": ["Governance", "Administration", "Microsoft Graph"]
+    },
+    "features": [
+      {
+        "title": "SharePoint Governance Dashboard",
+        "description": "Deploys the SharePoint Governance Dashboard client-side web part.",
+        "id": "9a0b1c2d-3e4f-4a6b-9c8d-9e0f1a2b3c4d",
+        "version": "1.0.0.0"
+      }
+    ],
+    "webApiPermissionRequests": [
+      { "resource": "Microsoft Graph", "scope": "Reports.Read.All" },
+      { "resource": "Microsoft Graph", "scope": "Sites.Read.All" },
+      { "resource": "Microsoft Graph", "scope": "Group.Read.All" },
+      { "resource": "Microsoft Graph", "scope": "GroupMember.Read.All" },
+      { "resource": "Microsoft Graph", "scope": "User.Read.All" }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/spfx-governance-dashboard.sppkg"
+  }
+}

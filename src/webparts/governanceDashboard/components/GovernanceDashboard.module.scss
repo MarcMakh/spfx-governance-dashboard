@@ -1,0 +1,214 @@
+.governanceDashboard {
+  color: "[theme:bodyText, default:#323130]";
+  font-family: "Segoe UI", "Segoe UI Web (West European)", -apple-system, BlinkMacSystemFont, sans-serif;
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.headerText {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.headerIcon {
+  font-size: 28px;
+  color: "[theme:themePrimary, default:#0078d4]";
+}
+
+.title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.subtitle {
+  font-size: 12px;
+  color: "[theme:neutralSecondary, default:#605e5c]";
+}
+
+/* ---------- Summary cards ---------- */
+.summaryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.summaryCard {
+  position: relative;
+  padding: 14px 16px;
+  border-radius: 8px;
+  background-color: "[theme:white, default:#ffffff]";
+  border: 1px solid "[theme:neutralLight, default:#edebe9]";
+  border-left: 4px solid "[theme:neutralTertiary, default:#a19f9d]";
+  box-shadow: 0 1.6px 3.6px rgba(0, 0, 0, 0.08);
+}
+
+.summaryIcon {
+  font-size: 18px;
+  color: "[theme:neutralSecondary, default:#605e5c]";
+}
+
+.summaryValue {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-top: 4px;
+}
+
+.summaryLabel {
+  font-size: 12px;
+  color: "[theme:neutralSecondary, default:#605e5c]";
+}
+
+/* ---------- Filter bar ---------- */
+.filterBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.searchBox {
+  width: 280px;
+  max-width: 100%;
+}
+
+/* ---------- Table cells ---------- */
+.subtle {
+  font-size: 11px;
+  color: "[theme:neutralSecondary, default:#605e5c]";
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.storageCell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.storageBarTrack {
+  flex: 1;
+  height: 8px;
+  border-radius: 4px;
+  background-color: "[theme:neutralLight, default:#edebe9]";
+  overflow: hidden;
+}
+
+.storageBarFill {
+  height: 100%;
+  border-radius: 4px;
+  background-color: "[theme:themePrimary, default:#0078d4]";
+}
+
+.storagePct {
+  font-size: 12px;
+  min-width: 34px;
+  text-align: right;
+}
+
+/* ---------- Badges ---------- */
+.badgeRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+  background-color: "[theme:neutralLighter, default:#f3f2f1]";
+  color: "[theme:neutralPrimary, default:#323130]";
+}
+
+/* ---------- States ---------- */
+.loading {
+  padding: 48px 0;
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 40px 0;
+  color: "[theme:neutralSecondary, default:#605e5c]";
+}
+
+.emptyIcon {
+  font-size: 32px;
+  color: "[theme:themePrimary, default:#0078d4]";
+}
+
+/* ---------- Tone modifiers ---------- */
+.good {
+  &.summaryCard,
+  &.badge {
+    border-left-color: #107c10;
+  }
+  &.badge {
+    background-color: rgba(16, 124, 16, 0.12);
+    color: #0b5a0b;
+  }
+  &.storageBarFill {
+    background-color: #107c10;
+  }
+}
+
+.warn {
+  &.summaryCard,
+  &.badge {
+    border-left-color: #c19c00;
+  }
+  &.badge {
+    background-color: rgba(193, 156, 0, 0.16);
+    color: #8a6d00;
+  }
+  &.storageBarFill {
+    background-color: #f7c948;
+  }
+}
+
+.critical {
+  &.summaryCard,
+  &.badge {
+    border-left-color: #d13438;
+  }
+  &.badge {
+    background-color: rgba(209, 52, 56, 0.12);
+    color: #a4262c;
+  }
+  &.storageBarFill {
+    background-color: #d13438;
+  }
+}
+
+.neutral {
+  &.summaryCard {
+    border-left-color: "[theme:themePrimary, default:#0078d4]";
+  }
+}
+
+.teams {
+  font-family: "Segoe UI", sans-serif;
+}
